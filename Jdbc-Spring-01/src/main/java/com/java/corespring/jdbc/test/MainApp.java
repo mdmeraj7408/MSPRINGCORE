@@ -44,7 +44,12 @@ public class MainApp {
 		StudentDao stdao=(StudentDao) context.getBean("studentDaoImpl");
 //		int result = stdao.remove(3);
 //		System.out.println(result+" Row Deleted....");
-		Student student = stdao.getStudent(1);
-		System.out.println(student);
+		//Student student = stdao.getStudent(1);
+		//System.out.println(student);
+		List<Student> all = stdao.getAll();
+		for(Student s:all)
+		{
+			System.out.println(s);
+		}
 	}
 }
