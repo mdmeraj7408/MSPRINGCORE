@@ -65,3 +65,14 @@ public String toString() {
 }
 
 }
+/* DataBase
+Table: student
+Columns:
+id int 
+name varchar(45) 
+course varchar(45) 
+phone int 
+city varchar(45) 
+email varchar(45)
+
+*/
