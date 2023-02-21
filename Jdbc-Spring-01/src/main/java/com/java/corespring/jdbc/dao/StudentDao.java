@@ -11,5 +11,7 @@ public int change(Student st);
 public int remove(int id);
 //select user
 public Student getStudent(int id);
+ //select all
+public List<Student> getAll();
 
 }
