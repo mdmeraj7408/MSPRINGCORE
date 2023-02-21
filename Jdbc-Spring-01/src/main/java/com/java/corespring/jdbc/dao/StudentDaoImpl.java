@@ -47,4 +47,11 @@ public class StudentDaoImpl implements StudentDao {
 		Student st = this.jdbcTemplate.queryForObject(query, rowMapper,id);
 		return st;
 	}
+	//get all
+	@Override
+	public List<Student> getAll() {
+		String query="select*from student";
+	List<Student> list=this.jdbcTemplate.query(query,new rowMapperImpl());
+		return list;
+	}
 }
