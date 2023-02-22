@@ -16,8 +16,8 @@ public class MainApp2 {
 		ApplicationContext context=
 				new AnnotationConfigApplicationContext(ConfigJdbc.class);
 		Student.details();
-//		//insert data
 		StudentDao stdao=(StudentDao) context.getBean("studentDao");
+//		//insert data
 //		Student st=new Student();
 //		st.setId(4); 
 //		st.setName("Nazmul");
