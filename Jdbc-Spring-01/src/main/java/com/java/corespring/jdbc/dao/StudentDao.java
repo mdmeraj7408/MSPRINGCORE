@@ -1,5 +1,7 @@
 package com.java.corespring.jdbc.dao;
 
+import java.util.List;
+
 import com.java.corespring.jdbc.bean.Student;
 
 public interface StudentDao {
@@ -11,7 +13,6 @@ public int change(Student st);
 public int remove(int id);
 //select user
 public Student getStudent(int id);
- //select all
+//select all
 public List<Student> getAll();
-
 }

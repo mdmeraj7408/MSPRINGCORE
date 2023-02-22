@@ -56,23 +56,15 @@ public Student() {
 	super();
 	
 }
+public static void details ()
+{
+	System.out.println("id"+"\t" +"name"+"\t"+"course"+"\t"+"phone"+"\t\t"+"city"+"\t\t"+"email");
+}
 @Override
 public String toString() {
 	
-	return "id"+"\t" +"name"+"\t"+"course"+"\t"+"phone"+"\t\t"+"city"+"\t\t"+"email"+"\n"
-	+ id +"\t" + name + "\t" + course + "\t" + phone + "\t\t" + city
+	return id +"\t" + name + "\t" + course + "\t" + phone + "\t\t" + city
 			+ "\t\t" + email ;
 }
 
 }
-/* DataBase
-Table: student
-Columns:
-id int 
-name varchar(45) 
-course varchar(45) 
-phone int 
-city varchar(45) 
-email varchar(45)
-
-*/

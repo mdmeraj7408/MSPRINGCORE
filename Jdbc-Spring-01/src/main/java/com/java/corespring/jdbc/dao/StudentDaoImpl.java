@@ -1,12 +1,17 @@
 package com.java.corespring.jdbc.dao;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
 
 import com.java.corespring.jdbc.bean.Student;
+@Component("studentDao")
 
 public class StudentDaoImpl implements StudentDao {
-
+@Autowired
 	private JdbcTemplate jdbcTemplate;
 
 	public JdbcTemplate getJdbcTemplate() {
@@ -27,8 +32,8 @@ public class StudentDaoImpl implements StudentDao {
 
 	@Override
 	public int change(Student st) {
-		String query="UPDATE student SET name = ?, phone = ?,city = ?, email = ? WHERE id = 1";
-		int r = this.jdbcTemplate.update(query,st.getId(),st.getName(),st.getCourse(),st.getPhone(),st.getCity(),st.getEmail());
+		String query="UPDATE student SET name=?,course=?, phone=?,city=?, email=? WHERE id = 1";
+		int r = this.jdbcTemplate.update(query,st.getName(),st.getCourse(),st.getPhone(),st.getCity(),st.getEmail());
 
 		return r;
 	}

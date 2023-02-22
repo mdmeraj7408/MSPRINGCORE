@@ -1,5 +1,7 @@
 package com.java.corespring.jdbc.test;
 
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -12,18 +14,20 @@ public class MainApp {
 		//spring JdbcTemplate
 		ApplicationContext context=
 				new ClassPathXmlApplicationContext("com/java/corespring/jdbc/test/config.xml");
-		/*insert data
+		
+		Student.details();
+		//insert data
 		StudentDao stdao=(StudentDao) context.getBean("studentDaoImpl");
 		Student st=new Student();
-		st.setId(3); 
+		st.setId(5); 
 		st.setName("Rahim");
 		st.setCourse("Python");
 		st.setPhone(97866565);
 		st.setCity("Basti");
 		st.setEmail("mdRahim@gmail.com");
 		int result = stdao.insert(st);
-		System.out.println(result+"Row successfully inseted");
-        System.out.println(st);*/
+		
+        System.out.println(st);
 
 
 		//update table
@@ -41,11 +45,16 @@ public class MainApp {
         */
 		
 		//delete row
-		StudentDao stdao=(StudentDao) context.getBean("studentDaoImpl");
-//		int result = stdao.remove(3);
-//		System.out.println(result+" Row Deleted....");
+		
+		//int result = stdao.remove(3);
+		//System.out.println(result+" Row Deleted....");
+		
+		
+		//select details
 		//Student student = stdao.getStudent(1);
 		//System.out.println(student);
+		//select all 
+	
 		List<Student> all = stdao.getAll();
 		for(Student s:all)
 		{
